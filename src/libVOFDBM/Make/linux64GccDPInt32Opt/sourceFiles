@@ -1,0 +1,9 @@
+SOURCE = \
+bubble/bubble.C \
+bubble/bubbleIO.C \
+bubbleCloud/bubbleCloud.C \
+bubbleCloud/breakupModel.C \
+bubbleCloud/collisionModel.C \
+phaseCoupling/phaseCoupling.C \
+
+# sources
