@@ -28,10 +28,6 @@ Description
     Spherical bubble class with optional two-way coupling with the
     continuous phase, bubble-bubble collision, and breakup..
 
-Author
-    Dr. Martin Heinrich is copyright owner of the additional code, modified
-    on the basis of the solidParticle class which is part of OpenFOAM.
-
 SourceFiles
     bubbleI.H
     bubble.C
