@@ -85,7 +85,7 @@ bool Foam::bubble::move
             ReFunc = Re/24.0*0.44;
         }
 
-        scalar Dc = 2.75*(24.0*nuc/d_)*ReFunc*(3.0/4.0)*(rhoc/(d_*rhop));
+        scalar Dc = (24.0*nuc/d_)*ReFunc*(3.0/4.0)*(rhoc/(d_*rhop));
         
         // calculate momentum
         scalar m = rhop*(4.0/3.0)*constant::mathematical::pi*pow(d_/2.0, 3.0);
@@ -142,27 +142,6 @@ for (int j=0; j<6; j++)
 
 scalar VPleft;
 scalar VdispoCellP;
-/*
-if ( m/rhop > 8.0*mesh().cellVolumes()[cellP])
-{
-      VPleft=pow(d_,3)*Foam::constant::mathematical::pi/6.0;
-      VdispoCellP = (1.0-alpha1P)*mesh().cellVolumes()[cellP];
-      cloud.correctalpha1()[cellP] = 1.0;
-      cloud.source()[cellP] += 0.111*(U_-Uc)*rhop*mesh().cellVolumes()[cellP];
-    
-      // Create dynamic list to store all neighbours
-      DynamicList<label> cells(0);
-      // Get neighbours of particle Cell
-      cells.append(mesh().cellCells()[cellP]);
- 
-        // Loop over all current neighbours
-        forAll(cells, i)
-        {
-            label cellI = cells[i];
-            cloud.correctalpha1()[cellI] += 0.125*(VPleft-VdispoCellP)/mesh().cellVolumes()[cellI];
-             cloud.source()[cellI] += 0.111*(U_-Uc)*rhop*mesh().cellVolumes()[cellI];
-        } 
-}*/
  
 if (nearInterface)
 {
