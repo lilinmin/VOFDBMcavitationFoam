@@ -5,7 +5,6 @@ cd "${0%/*}" || exit                                # Run from this directory
 
 
 wmake $targetType
-wmake $targetType VOFDBMcavitation2DyMFoam
-wmake $targetType overVOFDBMcavitation2DyMFoam
+wmake $targetType VOFDBMcavitationDyMFoam
 
 #------------------------------------------------------------------------------
