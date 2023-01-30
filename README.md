@@ -17,4 +17,4 @@
 - Afterwards, compile the solver VOFDBMcavitationFoam in the application folder.
 
 ## Reference
-Linmin Li, Weisen Xu, Bowen Jiang, Xiaojun Li, Zuchao Zhu, A multiscale Eulerian-Lagrangian cavitating flow solver in OpenFOAM, SoftwareX 
+Linmin Li, Weisen Xu, Bowen Jiang, Xiaojun Li, Zuchao Zhu, A multiscale Eulerian-Lagrangian cavitating flow solver in OpenFOAM, SoftwareX, 2023, 21, 101304, https://doi.org/10.1016/j.softx.2022.101304
