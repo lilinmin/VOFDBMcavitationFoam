@@ -78,7 +78,7 @@ class bubbleCloud
         
         scalar p0_; //
         scalar pSat_; //added 7-6
-        scalar RPEqn_; //switch on/off RP
+       
         scalar gamma_;  //
         vector posP1_;
         scalar dP1_;
