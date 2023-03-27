@@ -143,8 +143,8 @@ Foam::phaseCoupling::phaseCoupling
         )
     ),
     U_(U),
-    alpha1_(alpha2),
-    alpha2_(alpha1),
+    alpha1_(alpha1),
+    alpha2_(alpha2),
     cloud_(bubbleCloud),
     active_(readBool(dict_.subDict("phaseCoupling").lookup("active"))),
     alphaLimit_(readScalar(dict_.subDict("phaseCoupling").lookup("alphaLimit"))),
