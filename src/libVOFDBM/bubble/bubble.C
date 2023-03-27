@@ -170,8 +170,7 @@ if (nearInterface)
         forAll(cells, i)
         {
               label cellIn = cells[i]; 
-              cloud.correctalpha1()[cellIn] += 0.167*(VPleft-VdispoCellP)/mesh().cellVolumes()[cellIn]; 
-              cloud.Usource()[cellIn] = (U_-Uc)/dt; 
+            
          }
    }
    td.keepParticle = false;
