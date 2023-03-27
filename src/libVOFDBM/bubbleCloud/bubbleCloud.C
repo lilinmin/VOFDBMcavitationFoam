@@ -341,15 +341,6 @@ void Foam::bubbleCloud::move()
         interpolationCell<scalar> alpha1Interp(alpha1); //
         interpolationCellPoint<scalar> pInterp(p); //
         
-    // Reset source term
-    source_.resize(mesh_.nCells());
-    source_ = vector::zero;
-     
-    Usource_.resize(mesh_.nCells());
-    Usource_ = vector::zero;
-    
-    correctalpha1_.resize(mesh_.nCells());
-    correctalpha1_ = 0; //
    
     bubble::trackingData
         td(*this, rhoInterp, UInterp, nuInterp, alpha1Interp, pInterp, g_.value()); //
@@ -363,10 +354,6 @@ void Foam::bubbleCloud::move()
     // Secondary breakup
     breakup_.update(*this, td, mesh_.time().deltaTValue());
 
-    // Source term for momentum equation
-    momentumSource_.primitiveFieldRef() = source_/(mesh_.time().deltaTValue()*mesh_.V());
-    Addalpha1_.primitiveFieldRef() = correctalpha1_;//
-    USource_.primitiveFieldRef() = Usource_; //added
     
     // Collect data from all processors for postprocessing and write to file
     Pstream::gatherList(dataDiameter_);
